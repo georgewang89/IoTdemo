@@ -21,15 +21,12 @@ app.get('/sendSMS', function(request, response){
   response.send('SMS sent!');
 });
 
-app.get('/respondtotwilliosms', function(request, respond)
-  if (twilio.validateExpressRequest(req, 'YOUR_AUTH_TOKEN')) {
+app.get('/respondtotwilliosms', function(request, respond){
+  if (twilio.validateExpressRequest(req, '143c81738b3c5ef61b3652b27e9400b4')) {
        var twiml = new twilio.TwimlResponse();
        console.log(twiml);
        twilio.sendSMS();
   }
-});
-
-console.log(
 });
 
 app.listen(app.get('port'), function() {
