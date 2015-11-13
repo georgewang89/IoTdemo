@@ -15,7 +15,7 @@ module.exports = {
     client.sms.messages.create({
         to:'+19292555208',
         from:'+19179333916',
-        body:smsContent
+        body:'ok'
     }, function(error, message) {
         // The HTTP request to Twilio will run asynchronously. This callback
         // function will be called when a response is received from Twilio
