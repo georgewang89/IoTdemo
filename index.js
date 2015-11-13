@@ -15,6 +15,11 @@ app.set('view engine', 'ejs');
 //response.render('./pages/home.ejs')
 //});
 
+app.get('/', function(request, response) {
+  var result = ''
+  response.send(result);
+});
+
 app.get('/sendSMS', function(request, response){
   twilio.sendSMS();
   console.log('hello');
