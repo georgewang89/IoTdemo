@@ -25,6 +25,7 @@ app.get('/respondtotwiliosms', function(request, respond){
     //   var twiml = new twilio.TwimlResponse();
 
        twilio.sendSMS();
+       response.send();
   }
 });
 
