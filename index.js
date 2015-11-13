@@ -26,7 +26,6 @@ app.get('/respondtotwiliosms', function(request, response){
 
        twilio.sendSMS();
        response.send('');
-  }
 });
 
 app.listen(app.get('port'), function() {
