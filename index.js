@@ -24,7 +24,7 @@ app.post('/respondtotwiliosms', function(request, respond){
   if (twilio.validateExpressRequest(req, '143c81738b3c5ef61b3652b27e9400b4')) {
        var twiml = new twilio.TwimlResponse();
 
-       twilio.sendSMS('I heard you say: ' + twiml + '.. add me to your contacts as GSDO Cloud :)');
+       twilio.sendSMS('I heard you say: ' + twiml + '.. add me to your contacts as GSDO Cloud :]');
        response.send('');
 
 });
