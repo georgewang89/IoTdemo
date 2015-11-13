@@ -13,25 +13,25 @@ app.set('view engine', 'ejs');
 app.get('/',function(request, response){
 response.render('./pages/home.ejs')
 });
-
+/*
 app.get('/', function(request, response) {
   var result = ''
   response.send(result);
-});
+});*/
 
 app.get('/sendSMS', function(request, response){
   twilio.sendSMS();
   console.log('hello');
   response.send('SMS sent!');
 });
-
+/*
 app.get('/respondtotwilliosms', function(request, respond){
   if (twilio.validateExpressRequest(req, '143c81738b3c5ef61b3652b27e9400b4')) {
        var twiml = new twilio.TwimlResponse();
        console.log(twiml);
        twilio.sendSMS();
   }
-});
+});*/
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
