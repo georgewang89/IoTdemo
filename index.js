@@ -1,5 +1,5 @@
 var express = require('express');
-var twilio = require('./twilio.js')
+//var twilio = require('./twilio.js')
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
@@ -34,5 +34,5 @@ app.get('/respondtotwilliosms', function(request, respond){
 });*/
 
 app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+  //console.log('Node app is running on port', app.get('port'));
 });
