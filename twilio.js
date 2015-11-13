@@ -3,7 +3,7 @@ var twilio = require('twilio');
 
 module.exports = {
 
-  sendSMS: function (smsContent) {
+  sendSMS: function () {
 
     // Create a new REST API client to make authenticated requests against the
     // twilio back end
