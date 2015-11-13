@@ -11,7 +11,7 @@ module.exports = {
 
     // Pass in parameters to the REST API using an object literal notation. The
     // REST client will handle authentication and response serialzation for you.
-smsContent = 'hiiiii'
+
     client.sms.messages.create({
         to:'+19292555208',
         from:'+19179333916',
