@@ -32,7 +32,7 @@ app.get('/sendSMS', function(request, response){
 app.post('/respondtotwiliosms', function(request, respond){
   //if (twilio.validateExpressRequest(request, '143c81738b3c5ef61b3652b27e9400b4')) {
        var twiml = new twilio.TwimlResponse();
-       var sms = request.body.body;
+       var sms = request.body.Body;
 
        twilio.sendSMS("I heard you say: " + sms + ".. Add me as a contact 'GSDO Cloud' =3");
        response.send('');
