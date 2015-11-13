@@ -20,12 +20,13 @@ app.get('/sendSMS', function(request, response){
   response.send('SMS sent!');
 });
 
-app.get('/respondtotwiliosms', function(request, response){
+app.get('/respondtotwiliosms', function(request, respond){
   //if (twilio.validateExpressRequest(req, '143c81738b3c5ef61b3652b27e9400b4')) {
-       var twiml = new twilio.TwimlResponse();
+    //   var twiml = new twilio.TwimlResponse();
 
        twilio.sendSMS();
-       response.send('thanks');
+       response.send('');
+  }
 });
 
 app.listen(app.get('port'), function() {
