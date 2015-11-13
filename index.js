@@ -21,9 +21,9 @@ app.get('/sendSMS', function(request, response){
 });
 
 app.post('/respondtotwiliosms', function(request, respond){
-  if (twilio.validateExpressRequest(req, '143c81738b3c5ef61b3652b27e9400b4')) {
+  //if (twilio.validateExpressRequest(request, '143c81738b3c5ef61b3652b27e9400b4')) {
        var twiml = new twilio.TwimlResponse();
-       twilio.sendSMS();
+       twilio.sendSMS('hello');
        response.send('');
 
 });
