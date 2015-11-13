@@ -3,7 +3,7 @@ var twilio = require('twilio');
 
 module.exports = {
 
-  sendSMS: function () {
+  sendSMS: function (smsContent) {
 
     // Create a new REST API client to make authenticated requests against the
     // twilio back end
@@ -11,11 +11,11 @@ module.exports = {
 
     // Pass in parameters to the REST API using an object literal notation. The
     // REST client will handle authentication and response serialzation for you.
-
+smsContent = 'hiiiii'
     client.sms.messages.create({
         to:'+19292555208',
         from:'+19179333916',
-        body:'hi!!'
+        body:smsContent
     }, function(error, message) {
         // The HTTP request to Twilio will run asynchronously. This callback
         // function will be called when a response is received from Twilio
