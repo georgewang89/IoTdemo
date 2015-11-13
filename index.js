@@ -1,5 +1,5 @@
 var express = require('express');
-var twilio = require('./twilio.js')
+var twilio = require('twilio')
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
