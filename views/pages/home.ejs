@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <% include ../partials/header.ejs %>
-</head>
 
-<body>
+  <head>
+    <% include ../partials/header.ejs %>
+  </head>
 
-<form action="addnew" method="post">
+  <body>
 
-Telephone number: <input name="name"></input><br />
+    <form action="addnew" method="post">
+      Telephone number: <input name="name"></input><br />
+      <textarea name="message"></textarea><br />
+      <button type="submit">Post Message</button>
+    </form>
 
-<textarea name="message"></textarea><br />
-
-<button type="submit">Post Message</button>
-
-</form>
-</body>
+  </body>
 
 </html>
