@@ -1,5 +1,4 @@
 var express = require('express');
-var spark = require('spark');
 var twilio = require('./twilio.js')
 var app = express();
 
