@@ -1,10 +1,16 @@
 var express = require('express');
 var twilio = require('./twilio.js')
+var bodyParser = require('body-parser')
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
+
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
@@ -23,7 +29,8 @@ app.get('/sendSMS', function(request, response){
 app.post('/respondtotwiliosms', function(request, respond){
   //if (twilio.validateExpressRequest(request, '143c81738b3c5ef61b3652b27e9400b4')) {
        var twiml = new twilio.TwimlResponse();
-       var sms = request.query.Body;
+       var sms = request.body.body;
+
        twilio.sendSMS("I heard you say: " + sms + ".. Add me as a contact 'GSDO Cloud' =3");
        response.send('');
 
