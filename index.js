@@ -38,7 +38,7 @@ app.post('/respondtotwiliosms', function(request, respond){
        var sms = "";
         sms = request.body.Body;
 
-       twilio.sendSMS("I heard you say: " + sms + ".. Add me as a contact 'GSDO Cloud' =3");
+       twilio.sendSMS("I heard you say: .. Add me as a contact 'GSDO Cloud' =3");
        response.send('');
 
 });
