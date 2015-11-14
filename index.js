@@ -9,11 +9,11 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
+  extended: false
 }));
 
 app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded()); // to support URL-encoded bodies
+//app.use(express.urlencoded()); // to support URL-encoded bodies
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
@@ -31,8 +31,12 @@ app.get('/sendSMS', function(request, response){
 
 app.post('/respondtotwiliosms', function(request, respond){
   //if (twilio.validateExpressRequest(request, '143c81738b3c5ef61b3652b27e9400b4')) {
-       var twiml = new twilio.TwimlResponse();
-       var sms = request.body.Body;
+       /*var twiml = new twilio.TwimlResponse();
+       twiml.message(function(){
+         this.body('')
+       })*/
+       var sms = "";
+        sms = request.body.Body;
 
        twilio.sendSMS("I heard you say: " + sms + ".. Add me as a contact 'GSDO Cloud' =3");
        response.send('');
