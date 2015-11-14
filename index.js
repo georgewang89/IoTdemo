@@ -1,17 +1,17 @@
 var express = require('express');
 var twilio = require('./twilio.js');
-//var bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 //var ejs = require('ejs');
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(__dirname + '/public'));
-/*
-app.use(bodyParser.json() );       // to support JSON-encoded bodies
+//app.use(bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
+  extended: false
 }));
+
+app.use(express.static(__dirname + '/public'));
 
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
