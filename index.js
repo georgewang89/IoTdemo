@@ -34,14 +34,13 @@ app.post('/respondtotwiliosms', function(request, respond){
   if (twilio.validateExpressRequest(request, '143c81738b3c5ef61b3652b27e9400b4')) {
       // var twiml = new twilio.TwimlResponse();
       // twiml.message('ok');
-      twilio.sendSMS(sms);
-     }
+
        var sms = "";
         sms = request.body.Body;
 
        twilio.sendSMS(sms);
        response.send('');
-
+  }
 });
 
 app.listen(app.get('port'), function() {
