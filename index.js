@@ -29,18 +29,18 @@ app.get('/sendSMS', function(request, response){
   console.log('hello');
   response.send('SMS sent!');
 });
-
+/*
 app.post('/respondtotwiliocall'), function(request, respond){
  //if (twilio.validateExpressRequest(request, '143c81738b3c5ef61b3652b27e9400b4'))
   var twiml = new twilio.TwimlResponse();
   twiml.say('Hello World!');
-}
+}*/
 
 app.post('/respondtotwiliosms', function(request, respond){
   //var sms = "";
   var sms = request.body.Body;
   var smsFrom = request.body.From;
-  twilio.sendSMS(sms);
+  twilio.sendSMS(sms, smsFrom);
   response.send('');
 
 });
