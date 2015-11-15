@@ -37,11 +37,11 @@ app.post('respondtotwiliocall'), function(request, respond){
 }
 
 app.post('/respondtotwiliosms', function(request, respond){
-       var sms = "";
-        sms = request.body.Body;
-
-       twilio.sendSMS(sms);
-       response.send('');
+  //var sms = "";
+  var sms = request.body.Body;
+  var smsFrom = request.body.From;
+  twilio.sendSMS(sms);
+  response.send('');
 
 });
 
