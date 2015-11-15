@@ -40,7 +40,7 @@ app.post('/respondtotwiliosms', function(request, respond){
   //var sms = "";
   var sms = request.body.Body;
   var smsFrom = request.body.From;
-  twilio.sendSMS(sms, smsFrom);
+  twilio.sendSMS("thanks for sending "+sms+" from "+smsFrom+". Add me to your contacts as GSDO cloud =3", smsFrom);
   response.send('');
 
 });
