@@ -39,7 +39,7 @@ app.post('/respondtotwiliosms', function(request, respond){
        var sms = "";
         sms = request.body.Body;
 
-       twilio.sendSMS(sms);
+       twilio.sendSMS('sms');
        response.send('');
 
 });
