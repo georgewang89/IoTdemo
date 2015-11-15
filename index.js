@@ -1,21 +1,21 @@
 var express = require('express');
 var twilio = require('./twilio.js');
-//var bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 //var ejs = require('ejs');
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
-/*
-//app.use(bodyParser.json() );       // to support JSON-encoded bodies
+
+app.use(bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: false
 }));
-*/
+
 app.use(express.static(__dirname + '/public'));
-/*
-app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded()); // to support URL-encoded bodies
-*/
+
+//app.use(express.json());       // to support JSON-encoded bodies
+//app.use(express.urlencoded()); // to support URL-encoded bodies
+
 // views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -36,8 +36,8 @@ app.post('/respondtotwiliosms', function(request, respond){
        twiml.message(function(){
          this.body('')
        })*/
-       var sms = "thanks!";
-        //sms = request.body.Body;
+       var sms = "";
+        sms = request.body.Body;
 
        twilio.sendSMS(sms);
        response.send('');
