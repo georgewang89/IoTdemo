@@ -1,7 +1,7 @@
 var express = require('express');
 var twilio = require('./twilio.js');
 var bodyParser = require('body-parser');
-var particle = require('/particle.js');
+var particle = require('./particle.js');
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
@@ -28,15 +28,18 @@ app.get('/sendSMS', function(request, response){
 });
 
 
-app.post('/respondtotwiliosms', function(request, respond){
+app.post('/respondtotwiliosms', function(request, response){
   //var sms = "";
   var sms = request.body.Body;
   var smsFrom = request.body.From;
   twilio.sendSMS("thanks for sending "+sms+" from "+smsFrom+". Save me to your contacts as Rainbow Unicorn =3", smsFrom);
   response.send('');
 
-  //particle.createEvent('ac');
+});
 
+app.get('/triggerphoton', function(request, response){
+  particle.createEvent('abc');
+  response.send('');
 });
 
 app.listen(app.get('port'), function() {
