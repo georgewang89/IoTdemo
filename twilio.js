@@ -39,15 +39,5 @@ module.exports = {
   receiveSMS: function () {
     // whatever
   }
-/*
-  makeCall: function(){
 
-    var client = new twilio.RestClient('AC60e9708efe4ceee37ee9e493689b45a3', '143c81738b3c5ef61b3652b27e9400b4');
-
-    client.makeCall({
-      to: callNumber,
-      from: 'your_twilio_phone_number',
-      url: 'http://gwangfirstnodeapp.herokuapp.com/'
-    });
-  }*/
 };
