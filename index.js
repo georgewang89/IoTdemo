@@ -1,7 +1,7 @@
 var express = require('express');
 var twilio = require('./twilio.js');
 var bodyParser = require('body-parser');
-//var ejs = require('ejs');
+var particle = require('/particle.js');
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
@@ -12,9 +12,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 app.use(express.static(__dirname + '/public'));
-
-//app.use(express.json());       // to support JSON-encoded bodies
-//app.use(express.urlencoded()); // to support URL-encoded bodies
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
@@ -29,12 +26,7 @@ app.get('/sendSMS', function(request, response){
   console.log('hello');
   response.send('SMS sent!');
 });
-/*
-app.post('/respondtotwiliocall'), function(request, respond){
- //if (twilio.validateExpressRequest(request, '143c81738b3c5ef61b3652b27e9400b4'))
-  var twiml = new twilio.TwimlResponse();
-  twiml.say('Hello World!');
-}*/
+
 
 app.post('/respondtotwiliosms', function(request, respond){
   //var sms = "";
@@ -42,6 +34,8 @@ app.post('/respondtotwiliosms', function(request, respond){
   var smsFrom = request.body.From;
   twilio.sendSMS("thanks for sending "+sms+" from "+smsFrom+". Save me to your contacts as Rainbow Unicorn =3", smsFrom);
   response.send('');
+
+  //particle.createEvent('ac');
 
 });
 
