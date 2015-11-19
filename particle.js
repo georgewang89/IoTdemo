@@ -14,21 +14,23 @@ module.exports = {
     //$.post('https://api.particle.io/v1/devices/3a0029000b47343138333038/motorset', { arg: 'on', access_token: 'accessToken' });
 
     $.ajax({
-      url: "https://api.particle.io/v1/devices/390036001347343432313031/motorset",
-      type: "POST",
-      beforeSend: function (request)
+      url: 'https://api.particle.io/v1/devices/390036001347343432313031/motorset',
+      method: 'POST',
+    /*  beforeSend: function (request)
             {
-                request.setRequestHeader("Authorization", "Bearer d90d64dbf20b94969e33c40c02a7bbd565244e48");
+                request.setRequestHeader("Authorization", 'Bearer d90d64dbf20b94969e33c40c02a7bbd565244e48");
                 request.setRequestHeader("Content-Type", "application/json");
-            },
-    /*  headers: {
-          "Authorization": "Bearer d90d64dbf20b94969e33c40c02a7bbd565244e48",
-          "Content-Type": "application/json"
-      },*/
+            },*/
+      headers: {
+          'Authorization': 'Bearer d90d64dbf20b94969e33c40c02a7bbd565244e48',
+          'Content-Type': 'application/json'
+      },
       data: {
-          "arg": "on"
+          'arg': 'on'
+      },
+      success: function(){
+        console.log('success!');
       }
-
     });
     console.log('hello!!!!');
 
