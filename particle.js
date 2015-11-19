@@ -15,14 +15,15 @@ module.exports = {
 
     $.ajax({
       url: "https://api.particle.io/v1/devices/390036001347343432313031/motorset",
-      type: "post",
+      type: "POST",
+      headers: {
+          "Authorization": "Bearer d90d64dbf20b94969e33c40c02a7bbd565244e48",
+          "Content-Type": "application/json"
+      },
       data: {
           "arg": "on"
-      },
-      headers: {
-          "Authorization": "Bearer d90d64dbf20b94969e33c40c02a7bbd565244e48"
-      },
-      dataType: "application/json"
+      }
+
     });
     console.log('hello!!!!');
 
