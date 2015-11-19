@@ -28,6 +28,7 @@ module.exports = {
       data: {
           'arg': 'on'
       },
+      dataType: 'applicaton/json',
       success: function(){
         console.log('success!');
       }
