@@ -3,11 +3,10 @@ var $ = require('jquery')(jsdom.jsdom().defaultView);
 
 module.exports = {
 
-  createEvent: function (test){
+  createEvent: function (){
 
-    console.log('hello!!!!');
 
-    var accessToken = "d90d64dbf20b94969e33c40c02a7bbd565244e48"
+    var accessToken = 'd90d64dbf20b94969e33c40c02a7bbd565244e48'
     var deviceID = "3a0029000b47343138333038";
     var setFunc = "motorset";
     var requestURL = "https://api.particle.io/v1/devices/" +deviceID + "/" + setFunc;
@@ -15,16 +14,18 @@ module.exports = {
     //$.post('https://api.particle.io/v1/devices/3a0029000b47343138333038/motorset', { arg: 'on', access_token: 'accessToken' });
 
     $.ajax({
-      url: 'https://api.particle.io/v1/devices/390036001347343432313031/motorset',
-      type: 'post',
+      url: "https://api.particle.io/v1/devices/390036001347343432313031/motorset",
+      type: "post",
       data: {
-          arg: 'on'
+          arg: "on"
       },
       headers: {
-          Authorization: 'Bearer '+ accessToken
+          Authorization: "Bearer "+ accessToken
       },
-      dataType: 'application/json'
+      dataType: "application/json"
     });
+    console.log('hello!!!!');
+
   }
 };
 /*

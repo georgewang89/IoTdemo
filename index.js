@@ -38,7 +38,7 @@ app.post('/respondtotwiliosms', function(request, response){
 });
 
 app.get('/triggerphoton', function(request, response){
-  particle.createEvent('abc');
+  particle.createEvent('');
   response.send('');
 });
 
