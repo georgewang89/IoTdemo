@@ -17,10 +17,10 @@ module.exports = {
       url: "https://api.particle.io/v1/devices/390036001347343432313031/motorset",
       type: "post",
       data: {
-          arg: "on"
+          "arg": "on"
       },
       headers: {
-          Authorization: "Bearer "+ accessToken
+          "Authorization": "Bearer d90d64dbf20b94969e33c40c02a7bbd565244e48"
       },
       dataType: "application/json"
     });
