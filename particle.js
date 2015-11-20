@@ -1,7 +1,7 @@
-/*var jsdom = require('jsdom');
+var jsdom = require('jsdom');
 var $ = require('jquery')(jsdom.jsdom().defaultView);
 
-var $ = require("https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js");
+//var $ = require("https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js");
 
 module.exports = {
 
