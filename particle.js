@@ -1,6 +1,6 @@
-var jsdom = require("jsdom");
+//var jsdom = require("jsdom");
 var Request = require('request');
-var $ = require('jquery')(jsdom.jsdom().defaultView);
+//var $ = require('jquery')(jsdom.jsdom().defaultView);
 
 module.exports = {
 
