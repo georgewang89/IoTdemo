@@ -1,7 +1,7 @@
 //var jsdom = require("jsdom");
-var Request = require('request');
+//var Request = require('request');
 //var $ = require('jquery')(jsdom.jsdom().defaultView);
-
+/*
 module.exports = {
 
   createEvent: function (command,callback){
@@ -84,6 +84,6 @@ $.ajax({
        'error':	function(jqXHR, textStatus, errorThrown) {
 
        }
-     });*/
+     });
    }
- };
+ };*/
