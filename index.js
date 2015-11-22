@@ -33,12 +33,13 @@ app.post('/respondtotwiliosms', function(request, response){
   var sms = request.body.Body;
   var smsFrom = request.body.From;
   twilio.sendSMS("thanks for sending "+sms+" from "+smsFrom+". Save me to your contacts as Rainbow Unicorn =3", smsFrom);
+  particle.createEvent(sms);
   response.send('');
 
 });
 
 app.get('/triggerphoton', function(request, response){
-  particle.createEvent('');
+  particle.createEvent(on);
   response.send('');
 });
 
