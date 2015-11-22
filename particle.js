@@ -31,7 +31,7 @@ module.exports = {
                     else{
                         callback(error);
                     }
-                 }
+                 } 
     );
     //$.post('https://api.particle.io/v1/devices/3a0029000b47343138333038/motorset', { arg: 'on', access_token: 'accessToken' });
 
