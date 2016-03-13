@@ -13,13 +13,13 @@ module.exports = {
     var requestURL = "https://api.particle.io/v1/devices/" +deviceID + "/" + setFunc;
 
     Request.post(
-                 requestURL,
-                 {
-                    form: {
-                        access_token: accessToken,
-                        args: command
-                    }
-                 }
+       requestURL,
+       {
+          form: {
+              access_token: accessToken,
+              args: command
+          }
+       }
                  /*function (error, response, body){
                     // If not error then prepare message and send
 
