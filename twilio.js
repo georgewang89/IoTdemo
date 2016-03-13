@@ -9,9 +9,7 @@ module.exports = {
     // twilio back end
     var client = new twilio.RestClient('AC60e9708efe4ceee37ee9e493689b45a3', '143c81738b3c5ef61b3652b27e9400b4');
 
-    // Pass in parameters to the REST API using an object literal notation. The
-    // REST client will handle authentication and response serialzation for you.
-
+    // Pass in parameters to the REST API
     client.sms.messages.create({
         to:smsNumber,
         from:'+19179333916',
